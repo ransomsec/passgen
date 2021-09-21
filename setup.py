@@ -6,7 +6,7 @@ run = os.system
 if str(install) == "Y" or str(install) == 'y':
 
 	run("chmod 777 pass_gen.py")
-	run(" sudo mkdir /usr/share/passgen")
+	run("sudo mkdir /usr/share/passgen")
 	run("sudo cp pass_gen.py /usr/share/passgen/pass_gen.py")
 
 	cmnd = (' #! /bin/sh \n exec python3 /usr/share/passgen/pass_gen.py "$@"')
