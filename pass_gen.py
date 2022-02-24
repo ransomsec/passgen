@@ -3,12 +3,13 @@
 
 import os
 import string
+import sys
 from time import sleep
 from random import randint, choice
 
 os.system("clear")
 interval = 0.05
-
+name = sys.argv[0]
 character = string.ascii_letters + string.digits + string.punctuation
 lower_case = string.ascii_lowercase 
 upper_case = string.ascii_uppercase
@@ -64,12 +65,12 @@ elif str(your_choice) == 'E' or str(your_choice) == 'e':
     print("Thanks for using :-)\n")
     exit()
 else:
-    os.system('exec passgen')
+    os.system(f'exec python3 {name}')
 
 repeat = input("Repeat? y or n: ")
 
 if str(repeat) == 'Y' or str(repeat) == 'y':
-        os.system('exec passgen')
+        os.system(f'exec python3 {name}')
 else:
     print("Good byy")
     exit()
